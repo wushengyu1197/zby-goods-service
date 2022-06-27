@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+      prefix: classpath:/static/views/
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://39.96.14.47:3306/shopping?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
+  jpa:
+    open-in-view: false
+
+
+
+# 日志
+logging:
+  level:
+    com.study.springboot.dao: info
+
+
+mybatis-pus:
+  mapper-locations: classpath*:com/shopping/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
