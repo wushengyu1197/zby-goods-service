@@ -6,6 +6,8 @@ import com.shopping.service.GoodsCategory.GoodsCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class GoodsCategoryServiceImpl implements GoodsCategoryService {
     @Autowired
@@ -34,5 +36,10 @@ public class GoodsCategoryServiceImpl implements GoodsCategoryService {
     @Override
     public int DeleteOne(int id) {
         return goodsCategoryMapper.deleteById(id);
+    }
+
+    @Override
+    public List<GoodsCategory> findAllGoodsCategory() {
+        return goodsCategoryMapper.selectAll();
     }
 }

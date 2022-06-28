@@ -36,10 +36,8 @@ public class GoodsInfoController {
         return goodInfoService.DeleteOne(goodInfo)>0;
     }
 
-//    public Boolean
-//    @GetMapping("/queryGoodsById")
 
-
+    @GetMapping("/queryGoodsById")
     public List<GoodBody> query(Long id) {
 //        QueryWrapper<GoodInfo> queryWrapper = new QueryWrapper<>();
 //        queryWrapper.like(StringUtils.hasText(nickName), "t_user.nick_name", nickName);
