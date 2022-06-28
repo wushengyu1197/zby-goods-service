@@ -4,8 +4,11 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.shopping.mapper.GoodsInfoMapper;
 import com.shopping.model.GoodInfo;
 import com.shopping.service.GoodInfo.GoodInfoService;
+import com.shopping.vo.GoodBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class GoodInfoServiceImpl implements GoodInfoService {
@@ -15,7 +18,7 @@ public class GoodInfoServiceImpl implements GoodInfoService {
 
 
     @Override
-    public GoodInfo findById(int id) {
+    public GoodInfo findById(Long id) {
         return goodsInfoMapper.selectById(id);
     }
 
@@ -48,7 +51,19 @@ public class GoodInfoServiceImpl implements GoodInfoService {
     }
 
     @Override
-    public int DeleteOne(int id) {
-        return goodsInfoMapper.deleteById(id);
+    public int DeleteOne(GoodInfo goodInfo) {
+        QueryWrapper<GoodInfo> wrapper = new QueryWrapper<>();
+        wrapper.eq("goods_name",goodInfo.getGoodsName());
+        return goodsInfoMapper.delete(wrapper);
+    }
+
+    @Override
+    public List<GoodBody> findGoodById(Long id) {
+        return goodsInfoMapper.findGoodById(id);
+    }
+
+    @Override
+    public List<GoodInfo> findAll() {
+        return goodsInfoMapper.findAllGood();
     }
 }

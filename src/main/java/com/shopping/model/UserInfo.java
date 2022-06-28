@@ -16,7 +16,7 @@ import java.util.Date;
 public class UserInfo {
 
     @TableId(value = "id",type= IdType.AUTO)
-    private int id;
+    private Long id;
 
     //手机号
     @TableField(value ="phone")

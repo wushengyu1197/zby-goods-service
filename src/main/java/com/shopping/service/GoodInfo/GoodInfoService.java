@@ -1,10 +1,14 @@
 package com.shopping.service.GoodInfo;
 
 import com.shopping.model.GoodInfo;
+import com.shopping.vo.GoodBody;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface GoodInfoService {
 
-    GoodInfo findById(int id);
+    GoodInfo findById(Long id);
 
     GoodInfo findByOne(GoodInfo goodInfo);
 
@@ -12,6 +16,10 @@ public interface GoodInfoService {
 
     int updateOne(GoodInfo goodInfo);
 
-    int DeleteOne(int id);
+    int DeleteOne(GoodInfo goodInfo);
+
+    List<GoodBody> findGoodById(Long id);
+
+    List<GoodInfo> findAll();
 
 }

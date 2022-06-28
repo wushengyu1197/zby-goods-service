@@ -18,7 +18,7 @@ import java.util.Date;
 public class GoodsSku {
 
     @TableId(value = "id",type = IdType.AUTO)
-    private int id;
+    private Long id;
 
     @TableField(value = "goods_id")
     private int goodsId;

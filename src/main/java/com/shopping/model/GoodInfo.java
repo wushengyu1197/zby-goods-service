@@ -18,7 +18,7 @@ import java.util.Date;
 public class GoodInfo {
 
     @TableId(value = "id",type = IdType.AUTO)
-    private int id;
+    private Long id;
 
     //商品名称
     @TableField(value = "goods_name")

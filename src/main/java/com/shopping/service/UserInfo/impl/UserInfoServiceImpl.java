@@ -6,13 +6,15 @@ import com.shopping.service.UserInfo.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserInfoServiceImpl implements UserInfoService {
 
     @Autowired
     private UserInfoMapper userInfoMapper;
     @Override
-    public UserInfo findById(int id) {
+    public UserInfo findById(Long id) {
         return userInfoMapper.selectById(id);
     }
 
@@ -34,5 +36,10 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public int DeleteOne(int id) {
         return userInfoMapper.deleteById(id);
+    }
+
+    @Override
+    public List<UserInfo> findAll() {
+        return userInfoMapper.findAll();
     }
 }

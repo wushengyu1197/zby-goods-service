@@ -18,7 +18,7 @@ public class GoodsCategory {
 
     //类目id
     @TableId(value = "id",type = IdType.AUTO)
-    private int id;
+    private Long id;
 
     //类目名称
     @TableField(value = "name")
