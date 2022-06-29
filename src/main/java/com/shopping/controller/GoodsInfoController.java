@@ -36,17 +36,30 @@ public class GoodsInfoController {
         return goodInfoService.DeleteOne(goodInfo)>0;
     }
 
-
     @GetMapping("/queryGoodsById")
     public List<GoodBody> query(Long id) {
-//        QueryWrapper<GoodInfo> queryWrapper = new QueryWrapper<>();
-//        queryWrapper.like(StringUtils.hasText(nickName), "t_user.nick_name", nickName);
-//        queryWrapper.like(StringUtils.hasText(title), "t_blog.title", title);
-//        queryWrapper.eq("t_blog.deleted_flag", 0);
-//        queryWrapper.eq("t_user.deleted_flag", 0);
-//        queryWrapper.apply("t_blog.user_id = t_user.id");
         return goodInfoService.findGoodById(id);
     }
+
+    @GetMapping("/UpperLowerShelves")
+    public Boolean UpperLowerShelves(@RequestParam Long id,@RequestParam int publishStatus){
+        if(1==publishStatus){
+            GoodInfo good = goodInfoService.findById(id);
+            if(0==good.getPublishStatus()){
+                good.setSubCategoryId(1);
+               return goodInfoService.updateOne(good)>0;
+            }
+        }
+        if(0==publishStatus){
+            GoodInfo good = goodInfoService.findById(id);
+            if(1==good.getPublishStatus()){
+                good.setSubCategoryId(0);
+                return goodInfoService.updateOne(good)>0;
+            }
+        }
+        return false;
+    }
+
 }
 
 

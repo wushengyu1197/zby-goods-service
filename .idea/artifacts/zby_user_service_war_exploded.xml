@@ -11,11 +11,11 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="zby-user-service" />
+          <element id="module-output" name="zby-goods-service" />
         </element>
         <element id="directory" name="lib">
           <element id="archive" name="zby-user-service-0.0.1-SNAPSHOT.jar">
-            <element id="module-output" name="zby-user-service" />
+            <element id="module-output" name="zby-goods-service" />
           </element>
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.7.1" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.7.1" />
@@ -61,12 +61,30 @@
           <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:3.1" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.3" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:2.0.3" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-redis:2.7.1" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-redis:2.7.1" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-keyvalue:2.7.1" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.7.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:5.3.21" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.3.21" />
+          <element id="library" level="project" name="Maven: io.lettuce:lettuce-core:6.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: io.netty:netty-common:4.1.78.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-handler:4.1.78.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-resolver:4.1.78.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-buffer:4.1.78.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-transport-native-unix-common:4.1.78.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-codec:4.1.78.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty-transport:4.1.78.Final" />
+          <element id="library" level="project" name="Maven: io.projectreactor:reactor-core:3.4.19" />
+          <element id="library" level="project" name="Maven: org.reactivestreams:reactive-streams:1.0.4" />
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.73" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.12.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/zby-user-service-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="zby-user-service/web/Web" />
+      <element id="javaee-facet-resources" facet="zby-goods-service/web/Web" />
     </root>
   </artifact>
 </component>

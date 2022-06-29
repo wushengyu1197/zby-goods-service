@@ -11,6 +11,11 @@ public class ZbyUserServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ZbyUserServiceApplication.class, args);
+//        		SpringApplication application=new SpringApplication(ZbyUserServiceApplication.class);
+//		String env="qa";
+//
+//		application.setAdditionalProfiles(env);
+//		application.run();
     }
 
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/zby-user-service.iml" filepath="$PROJECT_DIR$/zby-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zby-goods-service.iml" filepath="$PROJECT_DIR$/zby-goods-service.iml" />
     </modules>
   </component>
 </project>
